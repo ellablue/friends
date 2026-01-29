@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="512" viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+  <!-- Dashed border (rounded rectangle) -->
+  <rect
+    x="60" y="50"
+    width="904" height="412"
+    rx="206" ry="206"
+    fill="none"
+    stroke="#2d4a4a"
+    stroke-width="3"
+    stroke-dasharray="12,8"
+  />
+
+  <!-- Top pill/capsule shape -->
+  <rect
+    x="270" y="62"
+    width="120" height="40"
+    rx="20" ry="20"
+    fill="#4a7c7c"
+  />
+
+  <!-- Bottom pill/capsule shape -->
+  <rect
+    x="634" y="410"
+    width="120" height="40"
+    rx="20" ry="20"
+    fill="#4a7c7c"
+  />
+
+  <!-- Left circle (back) -->
+  <circle
+    cx="230" cy="256"
+    r="120"
+    fill="#4a7c7c"
+  />
+
+  <!-- Middle circle (overlapping) -->
+  <circle
+    cx="340" cy="256"
+    r="120"
+    fill="#6a9a9a"
+    opacity="0.9"
+  />
+
+  <!-- Overlap area (intersection effect) -->
+  <clipPath id="leftCircleClip">
+    <circle cx="230" cy="256" r="120"/>
+  </clipPath>
+  <circle
+    cx="340" cy="256"
+    r="120"
+    fill="#5a8a8a"
+    clip-path="url(#leftCircleClip)"
+  />
+
+  <!-- Bidirectional arrows -->
+  <g stroke="#2d4a4a" stroke-width="2.5" fill="none">
+    <!-- Top arrow (pointing right) -->
+    <line x1="480" y1="230" x2="560" y2="230"/>
+    <polyline points="550,222 560,230 550,238"/>
+
+    <!-- Bottom arrow (pointing left) -->
+    <line x1="480" y1="280" x2="560" y2="280"/>
+    <polyline points="490,272 480,280 490,288"/>
+  </g>
+
+  <!-- Right circle (single/merged) -->
+  <circle
+    cx="720" cy="256"
+    r="130"
+    fill="#1a5a5a"
+  />
+
+  <!-- Top left arrow indicator -->
+  <polyline
+    points="95,140 75,160 95,180"
+    stroke="#2d4a4a"
+    stroke-width="2.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Bottom right arrow indicator -->
+  <polyline
+    points="929,332 949,352 929,372"
+    stroke="#2d4a4a"
+    stroke-width="2.5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
